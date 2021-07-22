@@ -32,22 +32,52 @@ async function gtp(message, options = {}){
     const random1 = pokemon[Math.floor(Math.random() * pokemon.length)];
     const random2 = pokemon1[Math.floor(Math.random() * pokemon1.length)];
     const random3 = pokemon2[Math.floor(Math.random() * pokemon2.length)];
+   
+    let arr = [
+        "red",
+        "grey",
+        "blurple",
+        "green",
+    ]
+    let arr2 = [
+        "red",
+        "grey",
+        "blurple",
+        "green",
+    ]
+    let arr3 = [
+        "red",
+        "grey",
+        "blurple",
+        "green",
+    ]
+    let arr4 = [
+        "red",
+        "grey",
+        "blurple",
+        "green",
+    ]
+    const random4 = arr[Math.floor(Math.random() * arr.length)];
+    const random5 = arr2[Math.floor(Math.random() * arr2.length)];
+    const random6 = arr3[Math.floor(Math.random() * arr3.length)];
+    const random7 = arr4[Math.floor(Math.random() * arr4.length)];
+
 
     
     const btn = new MessageButton()
-    .setStyle('red')
+    .setStyle(random4)
     .setLabel(`${res.data.name}`)
     .setID('gtp1');
     const btn1 = new MessageButton()
-    .setStyle('gray')
+    .setStyle(random5)
     .setLabel(`${random1}`)
     .setID('gtp2')
     const btn2 = new MessageButton()
-    .setStyle('blurple')
+    .setStyle(random6)
     .setLabel(`${random2}`)
     .setID('gtp3')
     const btn3 = new MessageButton()
-    .setStyle('green')
+    .setStyle(random7)
     .setLabel(`${random3}`)
     .setID('gtp4')
 
@@ -70,7 +100,7 @@ async function gtp(message, options = {}){
     const row8 = new MessageActionRow()
     .addComponents(btn2, btn, btn3, btn1);
 
-    let arr = [
+    let arr1 = [
         row,
         row1,
         row2,
@@ -81,7 +111,7 @@ async function gtp(message, options = {}){
         row7,
         row8
     ]
-    const rand = arr[Math.floor(Math.random() * arr.length)];
+    const rand = arr1[Math.floor(Math.random() * arr1.length)];
     msg.delete()
     await message.channel.send(start, rand).then(async m =>{
         const filter = (mes) => mes.clicker.user.id === message.author.id;

@@ -16,6 +16,15 @@ djs.wyr(message, {
 })
 ```
 
+### Guess The Pokemon
+
+```js
+const djs = require('djs-fun-v12')
+djs.gtp(message, {
+    loadingMessage: "loading message here"// defualt: Loading ⚙️
+})
+```
+
 ### Rock Paper Scissors 
 
 ```js

@@ -7,34 +7,34 @@ async function wyr(message, options={}){
     const res = body.data
     const button = new MessageButton()
     .setStyle(options.rockButtonColor || 'red')
-    .setEmoji('🗿')
+    .setEmoji(options.rockEmoji || '🗿')
     .setID('rps1')
 
     const button1 = new MessageButton()
     .setStyle(options.paperButtonColor || 'grey')
-    .setEmoji('📰')
+    .setEmoji(options.paperEmoji || '📰')
     .setID('rps2')
 
     const button2 = new MessageButton()
     .setStyle(options.scissorsButtonColor || 'green')
-    .setEmoji('✂️')
+    .setEmoji(options.scissorsEmoji || '✂️')
     .setID('rps3')
 
     const button3 = new MessageButton()
     .setStyle(options.rockButtonColor || 'red')
-    .setEmoji('🗿')
+    .setEmoji(options.rockEmoji || '🗿')
     .setID('rps5454')
     .setDisabled()
 
     const button4 = new MessageButton()
     .setStyle(options.paperButtonColor || 'grey')
-    .setEmoji('📰')
+    .setEmoji(options.paperEmoji || '📰')
     .setID('rps45245')
     .setDisabled()
 
     const button5 = new MessageButton()
     .setStyle(options.scissorsButtonColor || 'green')
-    .setEmoji('✂️')
+    .setEmoji(options.scissorsEmoji || '✂️')
     .setID('rps548')
     .setDisabled()
 

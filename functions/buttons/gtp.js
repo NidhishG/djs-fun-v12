@@ -25,9 +25,9 @@ async function gtp(message, options = {}){
     .setImage(res.data.ShowImage)
     .setColor('ff0000')
 
-    const pokemon = require('../pokemon.json')
-    const pokemon1 = require('../pokemon1.json')
-    const pokemon2 = require('../pokemon2.json')
+    const pokemon = require('../../pokemon.json')
+    const pokemon1 = require('../../pokemon1.json')
+    const pokemon2 = require('../../pokemon2.json')
 
     const random1 = pokemon[Math.floor(Math.random() * pokemon.length)];
     const random2 = pokemon1[Math.floor(Math.random() * pokemon1.length)];

@@ -1,5 +1,6 @@
 async function wyr(message, options = {}){
     if(!message) throw new Error('djs-fun => Please add "message" param to wyr function')
+    const msg = await message.channel.send(options.loadingMessage || "Loading :gear:")
     const axios = require('axios')
     const body = await axios.get('https://api.tovade.xyz/v1/fun/wyr')
     const res = body.data
@@ -16,7 +17,7 @@ const { MessageActionRow, MessageButton } = require('discord-buttons')
 
       let row = new MessageActionRow()
       .addComponents(one, two);
-
+      msg.delete()
       await message.channel.send("**Would you rather**", row).then(async (m) => {
         const filter = (mes) => mes.clicker.user.id === message.author.id;
         const collector = m.createButtonCollector(filter);
